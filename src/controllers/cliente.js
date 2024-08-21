@@ -1,6 +1,6 @@
 const db = []; // Banco de dados em memória
 let nextId = 1; // ID único para cada cliente
-
+//i//
 const model = (body, id = nextId++) => {
   if (
     body.nome != undefined &&
