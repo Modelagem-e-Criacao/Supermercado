@@ -1,3 +1,12 @@
+const supermercado_controller = require("./controllers/supermercado.js");
+const enderecoLoja_controller = require("./controllers/endereco.js");
+const setor_controller = require("./controllers/setor.js");
+const funcionarios_controller = require("./controllers/funcionarios.js");
+const pagamento_controller = require("./controllers/pagamento.js");
+const carrinho_controller = require("./controllers/carrinho.js");
+const produtosCarrinho_controller = require("./controllers/produtos.js");
+const compraFinalizada_controller = require("./controllers/compra.js");
+
 const express = require("express");
 const app = express();
 const port = 3000;
@@ -41,14 +50,7 @@ controllers.forEach(controller => {
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 // Importando os controladores das entidades
-const supermercado_controller = require("./controllers/supermercado.js");
-const enderecoLoja_controller = require("./controllers/endereco.js");
-const setor_controller = require("./controllers/setor.js");
-const funcionarios_controller = require("./controllers/funcionarios.js");
-const pagamento_controller = require("./controllers/pagamento.js");
-const carrinho_controller = require("./controllers/carrinho.js");
-const produtosCarrinho_controller = require("./controllers/produtos.js");
-const compraFinalizada_controller = require("./controllers/compra.js");
+})
 
 // Rotas para a entidade Supermercado
 app.get("/supermercado", (req, res) => {
