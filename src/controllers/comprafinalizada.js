@@ -2,12 +2,12 @@ const db = [];
 let nextId = 1;
 
 const model = (body, id = nextId++) => {
-  if (body.tipo != undefined && body.valor != undefined) {
+  if (body.data != undefined) {
     return {
       id,
-      tipo: body.tipo,
-      valor: body.valor,
-      compraFinalizadaId: body.compraFinalizadaId // Referência à Compra Finalizada
+      data: body.data,
+      carrinhoId: body.carrinhoId, // Referência ao Carrinho
+      pagamentoId: body.pagamentoId // Referência ao Pagamento
     };
   }
 };
